@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.look_out">
+
+    <!-- 무음모드일 때 진동 설정하기 위한 퍼미션 -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <!-- 메시지 보내기 위한 퍼미션 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 전화 걸기 위한 퍼미션 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.DIAL_PHONE" />
+
+    <!-- 진동 울리기 위한 퍼미션 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_lookout_white"
+        android:label="LookOut"
+        android:roundIcon="@mipmap/ic_launcher_lookout_white_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Look_Out"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".Setting_AddDeviceActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".Setting_WatchLogActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".Setting_DeviceActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".Setting_AlarmActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".MessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Message_DefaultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlarmActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".IntroActivity"
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+    </application>
+
+</manifest>
